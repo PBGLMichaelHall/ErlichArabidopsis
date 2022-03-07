@@ -1,5 +1,14 @@
 # ErlichArabidopsis
 
+#After cloning the repository you should have a similar looking data tree:
+
+
+
+
+
+![datatree](https://user-images.githubusercontent.com/93121277/156999552-a7ec7f77-da91-401a-8f1d-3bc3bcef9004.png)
+
+
 The following is an R-Script written for the purposes of generating 23 and me Tab Separated Files to be run in Erlich's Reidentification of Samples using portable DNA sequencing. 
 
 ```{r Rscript}
@@ -44,7 +53,7 @@ parser3 <- function(samplename){
 parser3(samplename = samplename)
 
 ```
-# ErlichArabidopsis
+
 
 The following is the Snakemake workflow written for the purposes of generating 23 and me Tab Separated Files to be run in Erlich's Reidentification of Samples using portable DNA sequencing. 
 
@@ -82,3 +91,8 @@ rule Make23andMeTSV:
     shell:
         "Rscript test.R {wildcards.sample} {output.tsv} {input.vcf}"
 ```
+![Snakemake1](https://user-images.githubusercontent.com/93121277/156999615-0b29a453-9425-462a-a188-6e883f14281d.png)
+
+
+
+
