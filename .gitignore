@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+Snakemake/1001genomes_snp-short-indel_only_ACGTN.BIALLELIC.vcf.gz
+
