@@ -1,13 +1,25 @@
 # ErlichArabidopsis
 
+# Clone the Repository
+
+![Screenshot from 2022-03-25 09-42-58](https://user-images.githubusercontent.com/93121277/160086030-fa385984-62ed-40a2-a466-36cdc76cae73.png)
+
 # After cloning the repository you should have a similar looking data tree:
 ![Screenshot from 2022-03-25 09-41-12](https://user-images.githubusercontent.com/93121277/160085698-7b548821-8e36-4ba2-8764-f55a45fcef55.png)
 
 # Check out the envionment file with necessary conda channels and software dendencies
+![Screenshot from 2022-03-25 09-52-22](https://user-images.githubusercontent.com/93121277/160087772-21945841-5b85-48d7-9f80-b9957fcec73a.png)
 
-![Screenshot from 2022-03-25 09-39-10](https://user-images.githubusercontent.com/93121277/160085505-67f6283c-69cf-4bb4-be69-cb5d3a2912a6.png)
 
-The following is an R-Script written for the purposes of generating 23 and me Tab Separated Files to be run in Erlich's Reidentification of Samples using portable DNA sequencing. 
+
+# Install the environment
+![Screenshot from 2022-03-25 09-55-03](https://user-images.githubusercontent.com/93121277/160088292-64ce82b4-26c9-4562-b95b-0abc3e491a87.png)
+# Activate the environment
+![Screenshot from 2022-03-25 09-55-56](https://user-images.githubusercontent.com/93121277/160088392-c21970f0-7620-4bd3-8000-f2b797c0fe55.png)
+
+
+
+# The following is an R-Script written for the purposes of generating 23 and me Tab Separated Files to be run in Erlich's Reidentification of Samples using a Minion portable DNA sequencer. 
 
 ```{r Rscript}
 library(vcfR)
@@ -53,7 +65,7 @@ parser3(samplename = samplename)
 ```
 
 
-The following is the Snakemake workflow written for the purposes of generating 23 and me Tab Separated Files to be run in Erlich's Reidentification of Samples using portable DNA sequencing. 
+# The following is the Snakemake workflow written for the purposes of generating 23 and me Tab Separated Files to be run in Erlich's Reidentification of Samples using portable DNA sequencing. 
 
 
 ```{r Snakemake}
@@ -89,10 +101,17 @@ rule Make23andMeTSV:
     shell:
         "Rscript test.R {wildcards.sample} {output.tsv} {input.vcf}"
 ```
+
+# Run the following command 
+![Screenshot from 2022-03-25 09-58-54](https://user-images.githubusercontent.com/93121277/160089098-19816310-8b7b-4644-a794-c7e6bf9c87ec.png)
+# EXECUTION: -n Specifies a Dry Run jobs and rules are not executed
+# OUTPUT: -p Print out the shell commands that will be executed. (Default is FALSE) 
+# OUTPUT: -r Print the reason for each extended rule. (Default is FALSE)
+
 ![Snakemake1](https://user-images.githubusercontent.com/93121277/156999615-0b29a453-9425-462a-a188-6e883f14281d.png)
 
-
-
+# Print the Directed Acrylic Graph of the Snakemake Workflow using the command
+![Screenshot from 2022-03-25 10-05-16](https://user-images.githubusercontent.com/93121277/160090025-e6f5784f-6515-49aa-ba2e-c67cd07a8729.png)
 
 ![dag3](https://user-images.githubusercontent.com/93121277/157618155-5f7de31c-82c6-4799-8975-faf6541a0cd8.png)
 
