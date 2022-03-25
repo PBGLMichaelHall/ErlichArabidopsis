@@ -1,13 +1,11 @@
 # ErlichArabidopsis
 
-#After cloning the repository you should have a similar looking data tree:
+# After cloning the repository you should have a similar looking data tree:
+![Screenshot from 2022-03-25 09-41-12](https://user-images.githubusercontent.com/93121277/160085698-7b548821-8e36-4ba2-8764-f55a45fcef55.png)
 
+# Check out the envionment file with necessary conda channels and software dendencies
 
-
-
-
-![datatree](https://user-images.githubusercontent.com/93121277/156999552-a7ec7f77-da91-401a-8f1d-3bc3bcef9004.png)
-
+![Screenshot from 2022-03-25 09-39-10](https://user-images.githubusercontent.com/93121277/160085505-67f6283c-69cf-4bb4-be69-cb5d3a2912a6.png)
 
 The following is an R-Script written for the purposes of generating 23 and me Tab Separated Files to be run in Erlich's Reidentification of Samples using portable DNA sequencing. 
 
