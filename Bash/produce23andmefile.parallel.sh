@@ -1,7 +1,7 @@
 #Concatenate sample text file with sample names from 19.2 GB Vcf file listed
 cat losamplenames.txt \
 #Call parallel module with 30 cores running in parallel
-| parallel --jobs 30 "\
+| parallel --jobs 30 \
 #Use bcftools query
 bcftools query \
 #Use sample flag to make an empty sample set
