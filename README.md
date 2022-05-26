@@ -167,3 +167,31 @@ rule Make23andMeTSV:
 ![dag3](https://user-images.githubusercontent.com/93121277/157618155-5f7de31c-82c6-4799-8975-faf6541a0cd8.png)
 
 
+```r
+dictionary = {}
+
+import os
+files = os.listdir("./")
+myfiles = ['example23_1.txt','example23_2.txt']
+IDprefix= "A.t.1001-23me-ID-"
+iterator = 1
+#print(files)
+#print(myfiles)
+
+for filename in files:
+    if (filename in myfiles):
+        with open(filename) as f:
+            for line in f:
+                #Split each line.
+                line = line.strip().split("\t")
+                next_key=('\t'.join([line[i] for i in [1, 2, 3]]))
+                next_value=line[0]
+                iterator = iterator + 1 
+                next_value=IDprefix + str(iterator)
+                #print(next_key, next_value)
+                dictionary[next_key] = next_value
+
+#print(dictionary)
+
+```
+
